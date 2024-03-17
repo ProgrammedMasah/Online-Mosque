@@ -4,71 +4,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/shared.css">
         <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cocon-next-arabic" />
         <title>تحدي اليوم</title>
         <script src="script.js"></script>
     </head>
     <body>
-        <header>
-            <a href="#" class="logo">قُـطـوفٌ إِيـمـانـيَّـة</a>
-            <nav class="navigation">
-                <a href="#home_page">الصفحة الرئيسية</a>
-                <a href="#month_contest">منافسة الشهر</a>
-                <a href="#today_challenge">تحدي اليوم</a>
-                <a href="#today_contest">منافسة اليوم </a>
+        <header class="contest">
+            <a href="#" class="logo contest">قُـطـوفٌ إِيـمـانـيَّـة</a>
+            <nav class="navigation contest">
+                <a href="/">الصفحة الرئيسية</a>
+                <a href="/contest">منافسة الشهر</a>
+                <a href="/challenge">تحدي اليوم</a>
+                <a href="/contest">منافسة اليوم </a>
             </nav>
         </header>
         <div class="form-container" id="center">
             <form class="form">
                 <span class="challenge"> تحدي اليوم </span>
                 <span claas="desc"> صلاة التراويح </span>
-                
                 <div class="checkbox-wrapper">
-                    <input id="_checkbox-26" type="checkbox"> 
+                    <input name="pray_8" id="_checkbox-26" type="checkbox"> 
                     <label for="_checkbox-26"> 
                         <div class="tick_mark"></div>
                     </label>
                     <span class="option"> ثمانية ركعات </span>
                 </div>
                 <div class="checkbox-wrapper">
-                    <input id="_checkbox-26" type="checkbox">
-                    <label for="_checkbox-26">
+                    <input name="pray_20" id="_checkbox-27" type="checkbox">
+                    <label for="_checkbox-27">
                     <div class="tick_mark"></div> 
                     </label>
                     <span class="option"> عشرون ركعة </span>
                 </div>
                 <div class="checkbox-wrapper">
-                    <input id="_checkbox-26" type="checkbox">
-                    <label for="_checkbox-26">
+                    <input name="pray_20_with_3" id="_checkbox-28" type="checkbox">
+                    <label for="_checkbox-28">
                     <div class="tick_mark"></div>
                     </label>
                     <span class="option"> عشرون ركعة + وتر</span>
                 </div>
-
-
-
-
-
-
-                <!-- <input type="radio" id="option1" name="option" value="option1">
-                <label for="option1"> 8 ركعات</label><br>
-
-                <input type="radio" id="option2" name="option" value="option2">
-                <label for="option2"> 20 ركعة  </label><br>
-
-                <input type="radio" id="option3" name="option" value="option3">
-                <label for="option3"> وتر + 20 ركعة  </label><br> -->
-                
-                <!-- <div class="form-group">
-                    
-                </div>
-            <div class="form-group">
-                <label for="textarea">How Can We Help You?</label>
-                <textarea required="" cols="50" rows="10" id="textarea" name="textarea">          </textarea>
-            </div> -->
             <button type="submit" class="form-submit-btn">تأكيد</button>
             </form>
         </div>
+        <footer>
+            <nav class="menu-navigation-mobile contest">
+                <a href="/">الصفحة الرئيسية</a>
+                <a href="/contest">منافسة الشهر</a>
+                <a href="/challenge">تحدي اليوم</a>
+                <a href="/contest">منافسة اليوم </a>
+            </nav>
+        </footer>
     </body>
 </html>
 
