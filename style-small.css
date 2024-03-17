@@ -1,47 +1,13 @@
-*{
-    font-family: 'cocon-next-arabic';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-header{
-    width: 100%;
-    /*  */
-    position: fixed;
-    /*  */
-    z-index: 900;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 100px
-}
-.logo{
-    text-decoration: none;
-    color: #E5A18A;
-    font-weight: 700;
-    font-size: 2em;
-    
-}
-.navigation a{
-    text-decoration: none;
-    color: #E5A18A;
-    font-weight: 500;
-    font-size: 1.5em;
-    padding-left: 40px;
-}
-.navigation a:hover{
-    color: #e2caeb;
-}
-/* .main{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    //background: url(./img/snowfall-201496_1920.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-} */
+@media (max-width : 1199px) {
+    .gold-medal {
+        order: 1;
+    }
+    .selver-medal {
+        order: 2;
+    }
+    .pronz-medal {
+        order: 3;
+    }
 video {
     margin-top: 0px;
     z-index: -1;
@@ -120,4 +86,7 @@ video {
         margin-bottom: 50px;
     }
 
+}
+
+    
 }
