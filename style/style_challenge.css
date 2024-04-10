@@ -1,0 +1,326 @@
+*{
+    font-family: 'cocon-next-arabic';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.header{
+    background: linear-gradient(120deg, #E5A18A, #311e40);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .7rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo{
+    color: #311e40;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.navbar a{
+    color: #E5A18A;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 2.5rem;
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    color: #E5A18A;
+    font-weight: 500;
+    font-size: 1.5em;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+nav a:hover{
+    color: #e2caeb;
+}
+.icons:hover{
+    color: #e2caeb;
+}
+
+@media print {
+    .table, .table__body {
+    overflow: visible;
+    height: auto !important;
+    width: auto !important;
+    }
+}
+
+@page {
+    size: landscape;
+    margin: 0; 
+}
+
+@media (max-width: 1100px) {
+    .logo{
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    .icons{
+        display: inline-flex;
+        font-size: 1.8rem;
+        font-weight: 800;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: linear-gradient(120deg, #E5A18A, #311e40);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, 0.1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar{
+        height: 13.6rem;
+    }
+
+    .navbar a{
+        color: #311e40;
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        transform: .3s ease;
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);
+    }
+
+    nav a:hover{
+        color: #e2caeb;
+    }
+
+
+    tbody tr {
+        padding: 15px;
+        margin: 5px;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(120deg, #E5A18A, #311e40);
+    height: 100vh;
+    overflow: hidden;
+}
+/* .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; 
+    max-width: 400px; 
+    background: white;
+    border-radius: 10px;
+} */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+.center form{
+    direction: rtl;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.center h3{
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+form .txt-field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.txt-field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt-field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt-field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #76449c;
+    transition: .5s;
+}
+.txt-field input:focus ~ label,
+.txt-field input:valid ~ label{
+    top: -5px;
+    color: #76449c;
+}
+.txt-field input:focus ~ span::before,
+.txt-field input:valid ~ span::before{
+    width: 100%;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    margin: 20px 0;
+    background: linear-gradient(120deg, #E5A18A, #311e40);
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #311e40;
+    transition: .5s;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.radio-button {
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid #E5A18A;
+    position: relative;
+    margin: 0 10px;
+}
+
+.radio-circle::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio-circle::before {
+transform: translate(-50%, -50%) scale(1.009);
+}
+
+.radio-button:nth-of-type(1) input[type="radio"]:checked + .radio-circle::before {
+background-color: #6b3e91;
+}
+
+.radio-button:nth-of-type(2) input[type="radio"]:checked + .radio-circle::before {
+background-color: #6b3e91;
+}
+
+.radio-button:nth-of-type(3) input[type="radio"]:checked + .radio-circle::before {
+background-color: #6b3e91;
+}
+
+.radio-label {
+font-size: 20px;
+font-weight: bold;
+color: #311e40;
+}
+
+@media(max-width:1023px){
+    .center {
+        direction: rtl;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 380px;
+        background: white;
+        border-radius: 10px;
+    }
+}
