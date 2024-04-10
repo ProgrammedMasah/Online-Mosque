@@ -49,8 +49,8 @@
 
                         while($row = mysqli_fetch_array($query)){
                             if($counter==0) {$first=$row["points"]; $counter++;}
-                            else if($counter==1 and $row["points"] < $first) {$second=$row["points"]; $counter++;}
-                            else if($counter==2 and $row["points"] < $second) {$third=$row["points"]; $counter++;}
+                            else if($second==-1 and $row["points"] < $first) {$second=$row["points"]; $counter++;}
+                            else if($third==-1 and $row["points"] < $second) {$third=$row["points"]; $counter++;}
                             else $counter++;
                             echo "<tr>";
                             if($row["points"]==$first and $row["points"]!=0 ){echo "<td> <img class='medal' src='./Media/ميدالية -01.png'></td>";}
